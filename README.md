@@ -14,17 +14,18 @@ cd cinema_service_API
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-set DB_HOST=<your db host name>
-set DB_NAME=<your db name>
-set DB_USER=<your db username>
-set DB_PASSWORD=<your db password>
-set SECRET_KEY=<your secret key>
+set HOST=<your db host name>
+set NAME=<your db name>
+set USER=<your db username>
+set PASSWORD=<your db password>
+set DJANGO_SECRET_KEY=<your secret key>
 python manage.py migrate
 python manage.py runserver
 ```
 
 ## Run project with docker
 
+Create .env file in main directory (use .env.sample for example)
 ```shell
 docker-compose build
 docker-compose up
@@ -56,8 +57,8 @@ docker-compose up
 
 You can use this data for testing all the features
 ```shell
-DB_HOST=db
-DB_NAME=app
-DB_USER=postgres
-DB_PASSWORD=supersecretpassword
+HOST=db
+NAME=app
+USER=postgres
+PASSWORD=supersecretpassword
 ```
