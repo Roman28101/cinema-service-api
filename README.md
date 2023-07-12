@@ -14,10 +14,10 @@ cd cinema_service_API
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-set HOST=<your db host name>
-set NAME=<your db name>
-set USER=<your db username>
-set PASSWORD=<your db password>
+set POSTGRES_HOST=<your db host name>
+set POSTGRES_DB=<your db name>
+set POSTGRES_USER=<your db username>
+set POSTGRES_PASSWORD=<your db password>
 set DJANGO_SECRET_KEY=<your secret key>
 python manage.py migrate
 python manage.py runserver
