@@ -23,9 +23,20 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+## Environment variables
+* create .env file in main directory
+* set data into it
+```shell
+POSTGRES_HOST=POSTGRES_HOST
+POSTGRES_DB=POSTGRES_DB
+POSTGRES_USER=POSTGRES_USER
+POSTGRES_PASSWORD=POSTGRES_PASSWORD
+```
 ## Run project with docker
 
-Create .env file in main directory (use .env.sample for example)
+* Download and install [Docker](https://www.docker.com/products/docker-desktop/)
+* Run in terminal:
+
 ```shell
 docker-compose build
 docker-compose up
@@ -55,10 +66,18 @@ docker-compose up
 
 ## For testing features
 
-You can use this data for testing all the features
+You can use this data for testing all the features. 
+* For DB settings:
 ```shell
 HOST=db
 NAME=app
 USER=postgres
 PASSWORD=supersecretpassword
+```
+* for .env file: 
+```shell
+POSTGRES_HOST=db
+POSTGRES_DB=app
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=supersecretpassword
 ```
